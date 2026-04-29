@@ -885,8 +885,8 @@ p + p { margin-top: 1rem; }
   stroke-width: 1.5;
 }
 .car-diagram .car-glass {
-  fill: #1a2a40;
-  stroke: #233550;
+  fill: #2c2c2c;
+  stroke: #424242;
   stroke-width: 1;
 }
 .car-diagram .car-detail {
@@ -895,25 +895,30 @@ p + p { margin-top: 1rem; }
   stroke-width: 1;
 }
 .car-diagram .zone {
-  fill: rgba(255,255,255,0.03);
-  stroke: #3a3a3a;
+  fill: transparent;
+  stroke: #484848;
   stroke-width: 1;
   cursor: pointer;
-  transition: fill 150ms ease, stroke 150ms ease;
+  transition: fill 120ms ease, stroke 120ms ease;
 }
 .car-diagram .zone:hover {
-  fill: rgba(215, 40, 40, 0.22);
+  fill: rgba(215, 40, 40, 0.30);
   stroke: var(--c-accent);
+  stroke-width: 1.5;
 }
 .car-diagram .zone:focus {
   outline: none;
-  fill: rgba(215, 40, 40, 0.22);
+  fill: rgba(215, 40, 40, 0.30);
   stroke: var(--c-accent);
+  stroke-width: 1.5;
 }
 .car-diagram .zone.selected {
-  fill: rgba(215, 40, 40, 0.38);
+  fill: rgba(215, 40, 40, 0.50);
   stroke: var(--c-accent);
   stroke-width: 2;
+}
+.car-diagram .zone.selected:hover {
+  fill: rgba(215, 40, 40, 0.60);
 }
 .car-diagram .zone-label {
   fill: #909090;
