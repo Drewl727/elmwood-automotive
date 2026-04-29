@@ -17,9 +17,9 @@
   --c-accent-h:   #e53535;
   --c-accent-dim: rgba(215, 40, 40, 0.13);
   --c-accent-xdim:rgba(215, 40, 40, 0.06);
-  --c-text:       #f0f0f0;
-  --c-text-2:     #b0b0b0;
-  --c-text-muted: #5c5c5c;
+  --c-text:       #ffffff;
+  --c-text-2:     #d8d8d8;
+  --c-text-muted: #909090;
   --c-border:     #2a2a2a;
   --c-border-2:   #333;
 
@@ -50,7 +50,7 @@ body {
   background-color: var(--c-bg);
   color: var(--c-text);
   font-family: var(--f-body);
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.65;
   min-height: 100dvh;
   overflow-x: hidden;
