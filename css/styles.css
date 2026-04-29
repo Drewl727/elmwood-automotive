@@ -874,7 +874,7 @@ p + p { margin-top: 1rem; }
 
 .car-diagram {
   width: 100%;
-  max-width: 260px;
+  max-width: 380px;
   cursor: default;
   filter: brightness(1.75);
 }
@@ -916,15 +916,20 @@ p + p { margin-top: 1rem; }
   stroke-width: 2;
 }
 .car-diagram .zone-label {
-  fill: #4a4a4a;
+  fill: #909090;
   font-family: var(--f-display);
-  font-size: 8px;
+  font-size: 27px;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   pointer-events: none;
   dominant-baseline: middle;
-  text-anchor: middle;
+}
+.car-diagram .leader-line {
+  stroke: #666;
+  stroke-width: 1.5;
+  fill: none;
+  pointer-events: none;
 }
 .car-diagram .zone.selected ~ .zone-label,
 .car-diagram .zone:hover ~ .zone-label { fill: var(--c-accent); }

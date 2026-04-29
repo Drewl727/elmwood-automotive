@@ -201,37 +201,70 @@
               <p class="tool-step-hint">Click or tap the damaged area(s) on the diagram. Select all that apply.</p>
 
               <div class="car-diagram-wrap">
-                <svg class="car-diagram" viewBox="0 0 280 490" xmlns="http://www.w3.org/2000/svg"
+                <svg class="car-diagram" viewBox="-110 -65 500 640" xmlns="http://www.w3.org/2000/svg"
                      role="group" aria-label="Top-down car diagram — click zones to mark damage">
                   <title>Car damage zone selector</title>
+
+                  <!-- Car body silhouette -->
                   <path class="car-body" d="M 93,10 C 140,6 140,6 187,10 L 222,30 L 238,68 L 240,415 L 224,453 L 190,474 C 140,478 140,478 90,474 L 56,453 L 40,415 L 40,68 L 58,30 Z"/>
+
+                  <!-- Glass areas -->
                   <path class="car-glass" d="M 72,92 L 208,92 L 215,140 L 65,140 Z"/>
                   <path class="car-glass" d="M 65,358 L 215,358 L 208,408 L 72,408 Z"/>
                   <rect class="car-glass" x="40" y="156" width="25" height="98" rx="2"/>
                   <rect class="car-glass" x="215" y="156" width="25" height="98" rx="2"/>
-                  <path class="car-detail" d="M 65,140 L 65,156 M 215,140 L 215,156" stroke="#2e2e2e" stroke-width="1" fill="none"/>
-                  <path class="car-detail" d="M 65,254 L 65,358 M 215,254 L 215,358" stroke="#2e2e2e" stroke-width="1" fill="none"/>
+
+                  <!-- Detail lines -->
+                  <path stroke="#2e2e2e" stroke-width="1" fill="none" d="M 65,140 L 65,156 M 215,140 L 215,156"/>
+                  <path stroke="#2e2e2e" stroke-width="1" fill="none" d="M 65,254 L 65,358 M 215,254 L 215,358"/>
                   <line x1="40" y1="258" x2="240" y2="258" stroke="#2a2a2a" stroke-width="1"/>
-                  <path class="zone" data-zone="front-bumper" data-label="Front Bumper"   d="M 96,10 C 140,7 140,7 184,10 L 214,38 L 66,38 Z"/>
-                  <text class="zone-label" x="140" y="28" text-anchor="middle">FRONT BUMPER</text>
-                  <path class="zone" data-zone="hood"           data-label="Hood"           d="M 66,38 L 214,38 L 218,162 L 62,162 Z"/>
-                  <text class="zone-label" x="140" y="105" text-anchor="middle">HOOD</text>
-                  <path class="zone" data-zone="roof"           data-label="Roof"           d="M 62,162 L 218,162 L 218,352 L 62,352 Z"/>
-                  <text class="zone-label" x="140" y="258" text-anchor="middle">ROOF</text>
-                  <path class="zone" data-zone="driver-front"   data-label="Driver Side Front"    d="M 40,50 L 64,50 L 62,262 L 40,262 Z"/>
-                  <text class="zone-label" x="52" y="146" text-anchor="middle" font-size="7">DRIVER</text>
-                  <text class="zone-label" x="52" y="157" text-anchor="middle" font-size="7">FRONT</text>
-                  <path class="zone" data-zone="driver-rear"    data-label="Driver Side Rear"     d="M 40,262 L 62,262 L 56,447 L 40,447 Z"/>
-                  <text class="zone-label" x="50" y="350" text-anchor="middle" font-size="7">DRIVER</text>
-                  <text class="zone-label" x="50" y="361" text-anchor="middle" font-size="7">REAR</text>
+
+                  <!-- CLICKABLE ZONES -->
+                  <path class="zone" data-zone="front-bumper" data-label="Front Bumper"      d="M 96,10 C 140,7 140,7 184,10 L 214,38 L 66,38 Z"/>
+                  <path class="zone" data-zone="hood"          data-label="Hood"              d="M 66,38 L 214,38 L 218,162 L 62,162 Z"/>
+                  <path class="zone" data-zone="roof"          data-label="Roof"              d="M 62,162 L 218,162 L 218,352 L 62,352 Z"/>
+                  <path class="zone" data-zone="driver-front"  data-label="Driver Side Front" d="M 40,50 L 64,50 L 62,262 L 40,262 Z"/>
+                  <path class="zone" data-zone="driver-rear"   data-label="Driver Side Rear"  d="M 40,262 L 62,262 L 56,447 L 40,447 Z"/>
                   <path class="zone" data-zone="passenger-front" data-label="Passenger Side Front" d="M 216,50 L 240,50 L 240,262 L 218,262 Z"/>
-                  <text class="zone-label" x="228" y="146" text-anchor="middle" font-size="7">PASS.</text>
-                  <text class="zone-label" x="228" y="157" text-anchor="middle" font-size="7">FRONT</text>
                   <path class="zone" data-zone="passenger-rear"  data-label="Passenger Side Rear"  d="M 218,262 L 240,262 L 240,447 L 224,447 Z"/>
-                  <text class="zone-label" x="229" y="350" text-anchor="middle" font-size="7">PASS.</text>
-                  <text class="zone-label" x="229" y="361" text-anchor="middle" font-size="7">REAR</text>
-                  <path class="zone" data-zone="rear-bumper"    data-label="Rear Bumper"    d="M 56,447 L 224,447 L 190,474 C 140,478 140,478 90,474 L 56,453 Z"/>
-                  <text class="zone-label" x="140" y="464" text-anchor="middle">REAR BUMPER</text>
+                  <path class="zone" data-zone="rear-bumper"   data-label="Rear Bumper"       d="M 56,447 L 224,447 L 190,474 C 140,478 140,478 90,474 L 56,453 Z"/>
+
+                  <!-- LEADER LINES -->
+                  <line class="leader-line" x1="140" y1="24"  x2="140" y2="-34"/>
+                  <line class="leader-line" x1="40"  y1="155" x2="-15" y2="155"/>
+                  <line class="leader-line" x1="40"  y1="354" x2="-15" y2="354"/>
+                  <line class="leader-line" x1="240" y1="155" x2="295" y2="155"/>
+                  <line class="leader-line" x1="240" y1="354" x2="295" y2="354"/>
+                  <line class="leader-line" x1="140" y1="464" x2="140" y2="510"/>
+
+                  <!-- OUTSIDE LABELS -->
+                  <text class="zone-label" x="140" y="-42" style="text-anchor:middle">FRONT BUMPER</text>
+
+                  <text class="zone-label" style="text-anchor:end">
+                    <tspan x="-18" y="143">DRIVER</tspan>
+                    <tspan x="-18" dy="31">FRONT</tspan>
+                  </text>
+
+                  <text class="zone-label" style="text-anchor:end">
+                    <tspan x="-18" y="340">DRIVER</tspan>
+                    <tspan x="-18" dy="31">REAR</tspan>
+                  </text>
+
+                  <text class="zone-label" style="text-anchor:start">
+                    <tspan x="298" y="143">PASS.</tspan>
+                    <tspan x="298" dy="31">FRONT</tspan>
+                  </text>
+
+                  <text class="zone-label" style="text-anchor:start">
+                    <tspan x="298" y="340">PASS.</tspan>
+                    <tspan x="298" dy="31">REAR</tspan>
+                  </text>
+
+                  <text class="zone-label" x="140" y="525" style="text-anchor:middle">REAR BUMPER</text>
+
+                  <!-- INSIDE LABELS: Hood and Roof stay inside -->
+                  <text class="zone-label" x="140" y="105" style="text-anchor:middle">HOOD</text>
+                  <text class="zone-label" x="140" y="262" style="text-anchor:middle">ROOF</text>
                 </svg>
                 <div>
                   <p style="font-family:var(--f-display); font-size:0.7rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--c-text-muted); margin-bottom:0.5rem; text-align:center;">Selected Areas</p>
