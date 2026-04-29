@@ -691,7 +691,7 @@ p + p { margin-top: 1rem; }
   font-weight: 600;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
-  color: var(--c-text-muted);
+  color: var(--c-text-2);
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -876,6 +876,7 @@ p + p { margin-top: 1rem; }
   width: 100%;
   max-width: 260px;
   cursor: default;
+  filter: brightness(1.75);
 }
 
 .car-diagram .car-body {
